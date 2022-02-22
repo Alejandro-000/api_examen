@@ -1,0 +1,56 @@
+
+<style scoped>
+
+.listado{
+    background: lightseagreen;
+    border: solid;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15%;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+.producto{
+    width: 30%;
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 2rem;
+}
+
+li{
+    margin-bottom: 10px;
+}
+
+.botones{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.delete, .edit{
+    padding: 10px 15px;
+    font-size: 15px;
+    background: rgb(87, 255, 87);
+    border: solid;
+}
+
+</style>
+
+<div class="listado">
+    {{#each lista}}
+        <div class="producto" style="border: solid;">
+            <div>
+                <h2>{{username}}</h2>
+                <h3>{{full_name}}</h3>
+                <p>{{email}}</p>
+                <li>**{{contrasenya}}**</li>
+            </div>
+            <div class="botones">
+                <a class="delete" href="/users/borrar/{{id}}">Borrar</a>
+                <a class="edit" href="/users/editar/{{id}}">Editar</a>
+            </div>
+        </div>
+    {{/each}}
+</div>

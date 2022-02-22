@@ -1,0 +1,49 @@
+<style>
+
+form{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    align-items: center;
+    margin-left: 15%;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    background: lightgreen;
+}
+
+input, label{
+    width: 50%;
+    font-size: 17px;
+    padding: 10px 15px;
+}
+
+label{
+    margin-top: 25px;
+}
+
+.enviar{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+</style>
+
+<div>
+    <form action="" method="POST">
+        <label for="marca">Marca:</label>
+        <input type="text" name="marca" value="{{producto.marca}}" placeholder="Marca" autofocus>
+        <label for="modelo">Modelo:</label>
+        <input type="text" name="modelo" value="{{producto.modelo}}" placeholder="Modelo" autofocus>
+        <label for="potencia">Potencia:</label>
+        <input type="text" name="potencia" value="{{producto.potencia}}" placeholder="Potencia del vehículo" autofocus>
+        <label for="url">URL:</label>
+        <input type="text" name="url" value="{{producto.url_imagen}}" placeholder="url de imagen" autofocus>
+        <p></p>
+        <input class="enviar" type="submit" value="Cambiar Información">
+    </form>
+</div>
+
+
+
+

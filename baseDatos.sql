@@ -6,7 +6,8 @@ CREATE TABLE usuarios(
     id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     username VARCHAR(50),
     full_name VARCHAR(50),
-    email VARCHAR(100)
+    email VARCHAR(100),
+    contrasenya VARCHAR(50)
 );
 
 CREATE TABLE coches(

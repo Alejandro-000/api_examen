@@ -1,0 +1,60 @@
+
+<style scoped>
+
+.listado{
+    background: lightseagreen;
+    border: solid;
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 15%;
+    margin-bottom: 50px;
+    padding: 10px;
+}
+
+.producto{
+    width: 30%;
+    text-align: center;
+    margin: 10px;
+    padding-bottom: 2rem;
+}
+
+
+img{
+    margin: 10px;
+    margin-top: 20px;
+    width: 70%;
+}
+
+.botones{
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+
+.delete, .edit{
+    padding: 10px 15px;
+    font-size: 15px;
+    background: rgb(87, 255, 87);
+    border: solid;
+}
+
+</style>
+
+<div class="listado">
+    {{#each lista}}
+        <div class="producto" style="border: solid;">
+            <div>
+                <img src="{{url_imagen}}">
+                <h2>{{marca}}</h2>
+                <h3>{{modelo}}</h3>
+                <p>{{potencia}} CCs</p>
+                
+            </div>
+            <div class="botones">
+                <a class="delete" href="/cars/borrar/{{id}}">Eliminar Coche</a>
+                <a class="edit" href="/cars/editar/{{id}}">Editar</a>
+            </div>
+        </div>
+    {{/each}}
+</div>

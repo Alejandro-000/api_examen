@@ -7,7 +7,12 @@ const connection = conexionBase();
 /* GET PARA VER LA LISTA DE COCHES */
 router.get('/cars', function(req, res, next) {
     const consulta = connection.query('SELECT * FROM coches', (err, result) => {
-        // console.log('consulta: ',result);
+        res.render('lista_coches', {lista: result})
+    });
+});
+
+router.get('/cars/api', function(req, res, next) {
+    const consulta = connection.query('SELECT * FROM coches', (err, result) => {
         res.json({lista_de_coches: result});
     });
 });

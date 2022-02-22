@@ -1,0 +1,48 @@
+<style>
+
+form{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    align-items: center;
+    margin-left: 15%;
+    padding-bottom: 20px;
+    background: lightgreen;
+}
+
+input, label{
+    width: 50%;
+    font-size: 17px;
+    padding: 10px 15px;
+}
+
+label{
+    margin-top: 25px;
+}
+
+.enviar{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+</style>
+
+<div>
+    <form action="" method="POST">
+        <label for="username">Usuario:</label>
+        <input type="text" name="username" placeholder="Nombre de Usuario" autofocus>
+        <label for="nombre">Nombre Completo:</label>
+        <input type="text" name="nombre" placeholder="Nombre" autofocus>
+        <label for="email">Dirección de Correo Electrónico:</label>
+        <input type="email" name="email" placeholder="Correo Electrónico" autofocus>
+        <label for="password">Contraseña:</label>
+        <input type="password" name="password" placeholder="Contraseña" autofocus>
+        <p></p>
+        <input class="enviar" type="submit" value="Añadir Usuario">
+    </form>
+</div>
+
+
+
+

@@ -9,11 +9,7 @@
         padding: 10px;
         background: lightgrey;
         margin-bottom: 2rem;
-        justify-content: right;
-      }
-
-      .ultimo{
-        margin-right: 12rem;
+        justify-content: left;
       }
 
       a{
@@ -22,19 +18,19 @@
         font-weight: bold;
       }
 
-      .inicio, .ver_todo, .crear{
+      .primer_link, .ver_todo, .crear{
         margin-left: 5rem;
         font-size: 25px;
       }
 
     </style>
   </head>
-  <body style="padding: 0; margin: 0; background: coral;">
+  <body style="padding: 0; margin: 0; background: lightseagreen;">
     <div class="barra">
-      <p><a class="inicio" href="/">Inicio</a></p>
-      <p><a class="ver_todo" href="/">Ver todo</a></p>
-      {{!-- <p><a class="inicio" href="/signin">Iniciar Sesion</a></p> --}}
-      <p class="ultimo"><a class="crear" href="/add">Crear</a></p>
+      <p><a class="primer_link" href="/add_user">Añadir Usuarios</a></p>
+      <p><a class="ver_todo" href="/users">Listar Usuarios</a></p>
+      <p><a class="crear" href="/add_car">Añadir Coches</a></p>
+      <p class="cuart_link"><a class="ver_todo" href="/cars">Listar Coches</a></p>
     </div>
     {{{body}}}
   </body>

@@ -4,10 +4,11 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-// Importar dotenv para usarlo
-var env = require('dotenv');
 
-// var indexRouter = require('./routes/index');
+require('dotenv').config();
+console.log(process.env.NODE_ENV);
+
+
 var cochesRouter = require('./routes/coches')
 var usuariosRouter = require('./routes/usuarios');
 
@@ -23,7 +24,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-// app.use('/', indexRouter);
 app.use('/', cochesRouter);
 app.use('/', usuariosRouter);
 

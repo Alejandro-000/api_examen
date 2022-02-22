@@ -6,9 +6,9 @@ const connection = conexionBase();
 
 /* GET PARA VER LA LISTA DE COCHES */
 router.get('/cars', function(req, res, next) {
-    connection.query('SELECT * FROM coches', (err, result) => {
-        console.log('consulta: ',result);
-        res.render('lista_coches', {lista: result});
+    const consulta = connection.query('SELECT * FROM coches', (err, result) => {
+        // console.log('consulta: ',result);
+        res.json({lista_de_coches: result});
     });
 });
   
@@ -52,8 +52,7 @@ router.get('/cars/editar/:id', async(req, res, next) => {
       console.log('Consulta',result);
       res.render('coches/edit_coche', {producto: result[0]});
     });
-  });
-
+});
 
 
 module.exports = router;

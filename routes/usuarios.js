@@ -61,7 +61,30 @@ router.get('/users/editar/:id', async(req, res, next) => {
   });
 });
 
+router.post('/list/editar/:id', function(req, res, next) {
+  const {nombre, precio, url} = req.body;
+  const {id} = req.params;
+  console.log('El nuevo nombre del producto es:',nombre, 'y ahora está valorado en:', precio+'€')
+  connection.query('UPDATE productos SET ? WHERE id = ?', [{
+    nombre: nombre,
+    precio: precio,
+    url: url
+  }, id])
+  res.redirect('/');
+})
 
+/* POST PARA GUARDAR LA NUEVA INFORMACION DE UN USUARIO ESPECÍFICO */
+router.post('/list/editar/:id', function(req, res, next) {
+  const {nombre, precio, url} = req.body;
+  const {id} = req.params;
+  console.log('El nuevo nombre del producto es:',nombre, 'y ahora está valorado en:', precio+'€')
+  connection.query('UPDATE productos SET ? WHERE id = ?', [{
+    nombre: nombre,
+    precio: precio,
+    url: url
+  }, id])
+  res.redirect('/');
+});
 
 
 module.exports = router;

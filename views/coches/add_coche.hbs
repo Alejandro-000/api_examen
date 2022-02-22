@@ -1,0 +1,46 @@
+<style>
+
+form{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    align-items: center;
+    margin-left: 15%;
+    padding-bottom: 20px;
+    background: lightgreen;
+}
+
+input, label{
+    width: 50%;
+    font-size: 17px;
+    padding: 10px 15px;
+}
+
+label{
+    margin-top: 25px;
+}
+
+.enviar{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+</style>
+
+<div>
+    <form action="" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" placeholder="Nombre" autofocus>
+        <label for="precio">Precio:</label>
+        <input type="text" name="precio" placeholder="precio" autofocus>
+        <label for="precio">URL:</label>
+        <input type="text" name="url" placeholder="direccion url" autofocus>
+        <p></p>
+        <input class="enviar" type="submit" value="Crear Producto">
+    </form>
+</div>
+
+
+
+
